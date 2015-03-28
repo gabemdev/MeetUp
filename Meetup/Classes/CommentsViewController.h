@@ -7,10 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ArticleModel.h"
 #import "DetailViewController.h"
-@interface CommentsViewController : UIViewController<DetailViewDelegate>
+@interface CommentsViewController : UIViewController
 
-@property ArticleModel *selectedEvent;
+@property NSString *eventID;
 
 @end

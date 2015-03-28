@@ -74,6 +74,24 @@
 
 }
 
+- (void)getDataFromChanneel:(NSString *)channel andCompletionHandler:(void (^)(NSMutableArray *resultArray))completionHandler {
+    NSString *channelString = [NSString stringWithFormat:@"https://api.meetup.com/2/event_comments.json?event_id=%@&key=%@", channel, APIKey];
+    NSURL *url = [NSURL URLWithString:channelString];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        if (!connectionError) {
+            NSDictionary *channelDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&connectionError];
+            NSArray *array =  channelDict[@"results"];
+            NSMutableArray *results = [NSMutableArray new];
+            for (NSDictionary *items in array) {
+                ArticleModel *model = [[ArticleModel alloc] initWithDictionary:items];
+                NSLog(@"Model name: %@", model.comment);
+                [results addObject:model];
+            }
+            completionHandler(results);
+        }
+    }];
+}
 
 
 @end

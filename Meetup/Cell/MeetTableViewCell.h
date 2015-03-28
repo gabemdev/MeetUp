@@ -13,6 +13,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *eventName;
 @property (weak, nonatomic) IBOutlet UILabel *eventAddress;
 @property (weak, nonatomic) IBOutlet UILabel *distance;
+@property (weak, nonatomic) IBOutlet UILabel *memberName;
+@property (weak, nonatomic) IBOutlet UILabel *comment;
+@property (weak, nonatomic) IBOutlet UILabel *time;
 
 
 @end

@@ -72,7 +72,7 @@
     }else if ([segue.identifier isEqualToString:@"comments"]) {
         
         CommentsViewController *vc = segue.destinationViewController;
-        vc.selectedEvent = self.selectedEvent;
+        vc.eventID = self.selectedEvent.eventID;
         
     }
 }

@@ -65,7 +65,6 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
 
     if (!self.feedArray.count >0) {
-        NSLog(@"Arraya lready loaded");
     }
     else {
         ArticleModel *model = [self.feedArray objectAtIndex:indexPath.row];
@@ -81,15 +80,11 @@
 
 #pragma mark - Search Bar
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
-    NSString *searchString = searchBar.text;
-    NSCharacterSet *charSet = [NSCharacterSet whitespaceCharacterSet];
-    if (![[searchString stringByTrimmingCharactersInSet:charSet] length] == 0) {
         [self.indicator startAnimating];
-        [self.model searchWithKeyword:searchString withCompletionHandler:^(NSMutableArray *searchArray) {
+        [self.model searchWithKeyword:searchBar.text withCompletionHandler:^(NSMutableArray *searchArray) {
             self.feedArray = searchArray;
             [self performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
         }];
-    }
 }
 
 
@@ -137,7 +132,7 @@
 }
 
 - (void)setActivityIndicator {
-    self.indicator= [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    self.indicator= [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
     UIBarButtonItem *indicatorButton = [[UIBarButtonItem alloc] initWithCustomView:self.indicator];
     self.navigationItem.rightBarButtonItem = indicatorButton;
     [self.indicator startAnimating];

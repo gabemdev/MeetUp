@@ -20,6 +20,8 @@
 		6D3713FD1AC0C5D6009F555C /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D3713FC1AC0C5D6009F555C /* DetailViewController.m */; };
 		6D3714011AC0C65F009F555C /* URLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D3714001AC0C65F009F555C /* URLViewController.m */; };
 		6D3714071AC1291A009F555C /* CommentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D3714061AC1291A009F555C /* CommentsViewController.m */; };
+		6D883B151AC68B500047AA71 /* MemberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D883B141AC68B500047AA71 /* MemberViewController.m */; };
+		6D883B181AC6932E0047AA71 /* Member.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D883B171AC6932E0047AA71 /* Member.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,10 @@
 		6D3714001AC0C65F009F555C /* URLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLViewController.m; sourceTree = "<group>"; };
 		6D3714051AC1291A009F555C /* CommentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommentsViewController.h; path = Classes/CommentsViewController.h; sourceTree = "<group>"; };
 		6D3714061AC1291A009F555C /* CommentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommentsViewController.m; path = Classes/CommentsViewController.m; sourceTree = "<group>"; };
+		6D883B131AC68B500047AA71 /* MemberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberViewController.h; sourceTree = "<group>"; };
+		6D883B141AC68B500047AA71 /* MemberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberViewController.m; sourceTree = "<group>"; };
+		6D883B161AC6932E0047AA71 /* Member.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Member.h; sourceTree = "<group>"; };
+		6D883B171AC6932E0047AA71 /* Member.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Member.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +149,8 @@
 				6D3713F21AC09E82009F555C /* ArticleModel.m */,
 				6D3713F41AC0B22A009F555C /* MeetupAPI.h */,
 				6D3713F51AC0B22A009F555C /* MeetupAPI.m */,
+				6D883B161AC6932E0047AA71 /* Member.h */,
+				6D883B171AC6932E0047AA71 /* Member.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -169,6 +177,8 @@
 				6D3714001AC0C65F009F555C /* URLViewController.m */,
 				6D3714051AC1291A009F555C /* CommentsViewController.h */,
 				6D3714061AC1291A009F555C /* CommentsViewController.m */,
+				6D883B131AC68B500047AA71 /* MemberViewController.h */,
+				6D883B141AC68B500047AA71 /* MemberViewController.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -273,10 +283,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D883B181AC6932E0047AA71 /* Member.m in Sources */,
 				6D3714011AC0C65F009F555C /* URLViewController.m in Sources */,
 				6D3713FA1AC0BA9A009F555C /* MeetTableViewCell.m in Sources */,
 				6D3713CA1AC09B27009F555C /* AppDelegate.m in Sources */,
 				6D3713F61AC0B22A009F555C /* MeetupAPI.m in Sources */,
+				6D883B151AC68B500047AA71 /* MemberViewController.m in Sources */,
 				6D3713EF1AC09B71009F555C /* MainViewController.m in Sources */,
 				6D3713F31AC09E82009F555C /* ArticleModel.m in Sources */,
 				6D3713C71AC09B27009F555C /* main.m in Sources */,
@@ -472,6 +484,7 @@
 				6D3713E61AC09B27009F555C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6D3713E71AC09B27009F555C /* Build configuration list for PBXNativeTarget "MeetupTests" */ = {
 			isa = XCConfigurationList;
@@ -480,6 +493,7 @@
 				6D3713E91AC09B27009F555C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

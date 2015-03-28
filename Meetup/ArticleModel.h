@@ -33,10 +33,13 @@
 
 @property NSArray *comments;
 
+@property NSString *comment;
+
 
 @property NSString *completeAddress;
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 - (void)searchWithKeyword:(NSString *)keyword withCompletionHandler:(void(^)(NSMutableArray *searchArray))completionHandler;
+- (void)getDataFromChanneel:(NSString *)channel andCompletionHandler:(void (^)(NSMutableArray *resultArray))completionHandler;
 
 
 
