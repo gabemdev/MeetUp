@@ -11,5 +11,6 @@
 @interface CommentsViewController : UIViewController
 
 @property NSString *eventID;
+@property ArticleModel *event;
 
 @end

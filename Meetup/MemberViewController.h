@@ -15,4 +15,9 @@
 @property NSString *memberID;
 @property Member *member;
 
+@property NSString *name;
+@property NSString *location;
+@property NSData *imageData;
+@property NSArray *topics;
+
 @end

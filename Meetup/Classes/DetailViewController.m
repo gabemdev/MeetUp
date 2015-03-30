@@ -9,6 +9,8 @@
 #import "DetailViewController.h"
 #import "URLViewController.h"
 #import "CommentsViewController.h"
+#import "CommentModel.h"
+#import "Member.h"
 
 @interface DetailViewController ()<UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet UIView *topView;
@@ -30,6 +32,10 @@
     [super viewDidLoad];
     [self loadInfo];
     [self updateUI];
+
+    [CommentModel getCommentsForEvent:self.selectedEvent.eventID withCompletion:^(NSArray *commentArray) {
+        self.selectedEvent.comments = commentArray;
+    }];
     // Do any additional setup after loading the view.
 }
 
@@ -73,7 +79,6 @@
         
         CommentsViewController *vc = segue.destinationViewController;
         vc.eventID = self.selectedEvent.eventID;
-        
     }
 }
 @end

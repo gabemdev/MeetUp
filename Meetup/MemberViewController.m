@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) IBOutlet UILabel *locationLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *memberImageView;
+@property (weak, nonatomic) IBOutlet UILabel *memberLabel;
 @property NSString *imageString;
 
 @end
@@ -32,11 +33,13 @@
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError)
      {
          NSError *jsonError = nil;
-         NSDictionary *results = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
+         NSDictionary *results = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&jsonError];
+         NSDictionary *resultDict = results[@"results"][0];
+         self.locationLabel.text = [NSString stringWithFormat:@"%@, %@", resultDict[@"city"], resultDict[@"state"]];
+         self.memberLabel.text = [NSString stringWithFormat:@"%@", resultDict[@"name"]];
+         self.memberImageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:resultDict[@"photo"][@"photo_link"]]]];
 
-         self.memberArray = [results objectForKey:@"results"];
-         [self.tableView reloadData];
-         NSLog(@"Data: %@",self.memberArray);
+         NSLog(@"Reult Dict %@", resultDict);
      }];
 }
 

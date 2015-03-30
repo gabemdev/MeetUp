@@ -22,6 +22,7 @@
 		6D3714071AC1291A009F555C /* CommentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D3714061AC1291A009F555C /* CommentsViewController.m */; };
 		6D883B151AC68B500047AA71 /* MemberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D883B141AC68B500047AA71 /* MemberViewController.m */; };
 		6D883B181AC6932E0047AA71 /* Member.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D883B171AC6932E0047AA71 /* Member.m */; };
+		6DA5FFC21AC8E2A400669AD6 /* CommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA5FFC11AC8E2A400669AD6 /* CommentModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,8 @@
 		6D883B141AC68B500047AA71 /* MemberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberViewController.m; sourceTree = "<group>"; };
 		6D883B161AC6932E0047AA71 /* Member.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Member.h; sourceTree = "<group>"; };
 		6D883B171AC6932E0047AA71 /* Member.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Member.m; sourceTree = "<group>"; };
+		6DA5FFC01AC8E2A400669AD6 /* CommentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentModel.h; sourceTree = "<group>"; };
+		6DA5FFC11AC8E2A400669AD6 /* CommentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +154,8 @@
 				6D3713F51AC0B22A009F555C /* MeetupAPI.m */,
 				6D883B161AC6932E0047AA71 /* Member.h */,
 				6D883B171AC6932E0047AA71 /* Member.m */,
+				6DA5FFC01AC8E2A400669AD6 /* CommentModel.h */,
+				6DA5FFC11AC8E2A400669AD6 /* CommentModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -292,6 +297,7 @@
 				6D3713EF1AC09B71009F555C /* MainViewController.m in Sources */,
 				6D3713F31AC09E82009F555C /* ArticleModel.m in Sources */,
 				6D3713C71AC09B27009F555C /* main.m in Sources */,
+				6DA5FFC21AC8E2A400669AD6 /* CommentModel.m in Sources */,
 				6D3714071AC1291A009F555C /* CommentsViewController.m in Sources */,
 				6D3713FD1AC0C5D6009F555C /* DetailViewController.m in Sources */,
 			);
